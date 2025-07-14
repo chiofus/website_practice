@@ -55,23 +55,26 @@ body {
     /* font-family: Roboto; */
 }
 
-.right-elements {
-    /* font-family: Roboto; */
-}
-
-
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 12px;
+    gap: 16px;
 }
 
 li > a {
     text-decoration: none;
     font-size: 18px;
     color: #e5e7eb;
+}
+
+/* all sections */
+.main > .container > .section-content {
+    margin-top: 8vh;
+    margin-bottom: 10vh;
+    /* margin-bottom: 8vh; */
+    min-height: 32vh;
 }
 
 /* first section stuff */
@@ -84,9 +87,16 @@ li > a {
 .main-right-elements {
     justify-content: center;
     align-items: center;
-    min-height: 100%;
+    flex-direction: column;
+    /* min-height: 100%; */
     background-color: rgb(123, 127, 138);
-    flex-grow: 1;
+    /* flex-grow: 1; */
+}
+
+.bottom {
+    min-height: 10px;
+    min-width: 100%;
+    background-color: #1f2937;
 }
 
 .main-left-elements {
@@ -119,9 +129,13 @@ button > .text.smaller {
     font-weight: 800;
 }
 
-.main > .container > .section-content {
-    margin: 8vh 0;
-    gap: 20px;
+.main > .container.first > .section-content {
+    /* margin: 10vh 0; */
+    /* margin-bottom: 12vh; */
+    /* padding-bottom: 2vh; */
+    /* border: 2vh; */
+    gap: 30px;
+    /* min-height: 10vh; */
 }
 
 .container.first {
@@ -130,6 +144,11 @@ button > .text.smaller {
 
 .image-holder {
     color: white;
+    flex-grow: 1;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-left-elements > button {
@@ -145,13 +164,177 @@ button > .text.smaller {
     margin-top: 10px;
 }
 
+/* second section stuff */
+.container.second > .section-content {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
 
+.container.second > .section-content > .section-header {
+    flex-grow: 1;
+    height: 16vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
+
+.cards-holder {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-grow: 0;
+    /* min-width: 100%; */
+    gap: 48px;
+}
+
+
+.card {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 164px;
+    min-height: 164px;
+
+    /* flex-grow: 1; */
+    /* min-width: ; */
+}
+
+.card-content {
+    border: 4px solid #3882f6;
+    min-height: 164px;
+    min-width: 164px;
+    border-radius: 15px;
+    /* flex: 1; */
+    /* min-height: 100px; */
+}
+
+.card-subtext {
+    max-width: 172px;
+    text-align: center;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+/* third section */
+
+.container.third > .section-content {
+    background-color: #e5e7eb;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 10vh;
+    height: 48vh;
+    /* width: 20%; */
+}
+
+.container.third > .section-content > .text.quote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 100;
+    width: 77%;
+    color: #1f2937;
+    /* margin-top: 5vh; */
+    /* margin-bottom: 5vh */
+}
+
+.quoter {
+    width: 75%;
+    text-align: right;
+    font-size: 24px;
+    font-weight: 900;
+    color: #1f2937;
+}
 
 /* footer stuff */
 .footer {
     justify-content: center;
+    align-items: center;
+    background-color: #1f2937;
+    color: #f9faf8;
+    font-size: 18px;
 }
 
-.second, .fourth {
-    background-color: grey;
+/* fourth section */
+
+.container.fourth > .section-content {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 2vh;
 }
+
+.card-display {
+    flex: 1;
+    display: flex;
+    flex-grow: 1;
+    height: 50%;
+    background-color: #3882f6;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.messages {
+    /* flex: 1; */
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-space {
+    /* flex: 1; */
+    /* flex-grow: 1; */
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-display > .button-space > button {
+    padding: 0;
+    margin: 0;
+    border: 2px solid #f9faf8;
+    /* height: 10px; */
+    /* width: 40px; */
+    flex: 1;
+    flex-grow: 1;
+    text-wrap: nowrap;
+    /* height: fit-content; */
+    /* height: 50px; */
+    /* min-width: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3882f6;
+    color: #f9faf8;
+    padding: 6px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 10px;
+
+}
+
+.first-message {
+    color: #f9faf8;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.second-message {
+    color: #f9faf8;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* .second, .fourth {
+    background-color: white;
+} */
